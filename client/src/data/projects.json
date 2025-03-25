@@ -1,0 +1,94 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI Customer Support Automation",
+      "description": "Automated customer support system using LLMs to respond to common inquiries, reducing response time by 85%.",
+      "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "ai",
+      "categoryLabel": "AI Solution",
+      "technologies": ["OpenAI", "React", "Node.js"],
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "title": "Inventory Optimization System",
+      "description": "Machine learning algorithm that predicts inventory needs, reducing stockouts by 40% and overstock by 25%.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "automation",
+      "categoryLabel": "Automation",
+      "technologies": ["Python", "TensorFlow", "PostgreSQL"],
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "Smart Sales Analytics Dashboard",
+      "description": "Interactive dashboard with AI-powered recommendations that increased sales conversion rates by 35%.",
+      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "web",
+      "categoryLabel": "Web Application",
+      "technologies": ["React", "D3.js", "Firebase"],
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "title": "AI-Powered Content Generator",
+      "description": "Content creation tool that leverages GPT models to generate marketing copy tailored to specific business niches.",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "ai",
+      "categoryLabel": "AI Solution",
+      "technologies": ["OpenAI", "Express", "MongoDB"],
+      "link": "#"
+    },
+    {
+      "id": 5,
+      "title": "Automated Email Campaign Manager",
+      "description": "System that automates email workflows with personalized content based on customer behavior analysis.",
+      "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "automation",
+      "categoryLabel": "Automation",
+      "technologies": ["Python", "Pandas", "SendGrid", "AWS"],
+      "link": "#"
+    },
+    {
+      "id": 6,
+      "title": "Small Business CRM",
+      "description": "Custom CRM designed specifically for small businesses with AI-enhanced customer insights.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "web",
+      "categoryLabel": "Web Application",
+      "technologies": ["React", "Node.js", "GraphQL", "MongoDB"],
+      "link": "#"
+    },
+    {
+      "id": 7,
+      "title": "Predictive Customer Churn Model",
+      "description": "AI model that predicts customer churn with 87% accuracy, enabling proactive retention strategies.",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "ai",
+      "categoryLabel": "AI Solution",
+      "technologies": ["Python", "Scikit-learn", "TensorFlow", "PostgreSQL"],
+      "link": "#"
+    },
+    {
+      "id": 8,
+      "title": "Automated Social Media Scheduler",
+      "description": "Tool that schedules and optimizes social media posts based on audience engagement patterns.",
+      "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "automation",
+      "categoryLabel": "Automation",
+      "technologies": ["React", "Node.js", "Social Media APIs"],
+      "link": "#"
+    },
+    {
+      "id": 9,
+      "title": "Customer Feedback Analysis Dashboard",
+      "description": "NLP-powered dashboard that analyzes customer feedback to identify trends and sentiment patterns.",
+      "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "category": "web",
+      "categoryLabel": "Web Application",
+      "technologies": ["React", "Python", "NLP", "Recharts"],
+      "link": "#"
+    }
+  ]
+}

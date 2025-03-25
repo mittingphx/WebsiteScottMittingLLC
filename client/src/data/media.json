@@ -1,0 +1,69 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "AI for Small E-commerce Demo",
+      "description": "A walkthrough of a custom AI recommendation engine built for small e-commerce businesses.",
+      "thumbnail": "https://images.unsplash.com/photo-1626908013351-800ddd7f493c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "8:24",
+      "date": "March 15, 2023",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "LLM Prompting for Businesses",
+      "description": "A tech talk on effective prompting techniques for businesses looking to leverage language models.",
+      "thumbnail": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "22:15",
+      "date": "June 7, 2023",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "Live Coding: Building an AI Assistant",
+      "description": "Full coding session on how to build a custom AI assistant for customer service.",
+      "thumbnail": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "1:12:47",
+      "date": "October 22, 2023",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "title": "AI Ethics for Small Business Applications",
+      "description": "Discussion on ethical considerations when implementing AI in small business environments.",
+      "thumbnail": "https://images.unsplash.com/photo-1573164713988-8665321e3075?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "34:21",
+      "date": "January 5, 2024",
+      "url": "#"
+    },
+    {
+      "id": 5,
+      "title": "Optimizing AI Models for Edge Devices",
+      "description": "Technical walkthrough of how to optimize machine learning models for deployment on limited hardware.",
+      "thumbnail": "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "41:03",
+      "date": "February 18, 2024",
+      "url": "#"
+    },
+    {
+      "id": 6,
+      "title": "Data Privacy and AI: A Guide for Small Businesses",
+      "description": "Practical guide on maintaining data privacy standards while implementing AI solutions.",
+      "thumbnail": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "28:45",
+      "date": "April 3, 2024",
+      "url": "#"
+    },
+    {
+      "id": 7,
+      "title": "From Excel to AI: Small Business Data Transformation",
+      "description": "Step-by-step process for migrating from basic spreadsheets to intelligent data systems.",
+      "thumbnail": "https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "duration": "45:12",
+      "date": "May 15, 2024",
+      "url": "#"
+    }
+  ],
+  "music": [],
+  "presentations": []
+}

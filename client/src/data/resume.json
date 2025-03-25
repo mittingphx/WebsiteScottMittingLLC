@@ -1,0 +1,48 @@
+{
+  "name": "Scott Mitting",
+  "title": "Freelance Software Developer & Entrepreneur",
+  "contact": {
+    "email": "scott@scottmitting.com",
+    "location": "Phoenix, AZ",
+    "website": "scottmitting.com",
+    "github": "https://github.com/mittingphx"
+  },
+  "summary": "Full-stack software developer and entrepreneur with a focus on AI and machine learning solutions for small businesses. Experienced in developing custom software, AI models, and automation systems that help small businesses compete with larger corporations. Strong foundation in computer science with a passion for leveraging cutting-edge technology to solve real-world business problems.",
+  "skills": {
+    "technical": [
+      "Full-stack software development",
+      "AI/ML model development",
+      "LLM prompting and implementation",
+      "Low-level systems programming",
+      "Neural network design",
+      "React, Node.js, Python, TensorFlow"
+    ],
+    "business": [
+      "Project management",
+      "Business process automation",
+      "Client communication",
+      "Requirements gathering",
+      "Technology consulting",
+      "Small business strategy"
+    ]
+  },
+  "education": {
+    "institution": "Purdue University",
+    "degree": "B.S. in Computer Science",
+    "gpa": "3.6",
+    "details": "Specialized coursework in genetic algorithms and artificial intelligence."
+  },
+  "experience": [
+    {
+      "company": "Scott Mitting LLC",
+      "position": "Founder & Software Developer",
+      "period": "Present",
+      "responsibilities": [
+        "Develop AI-powered solutions for small businesses to enhance their operational efficiency and competitive edge.",
+        "Create custom software applications focused on automation, data analysis, and machine learning.",
+        "Consult with clients to identify opportunities for technology-driven business improvements.",
+        "Design and implement neural networks and language models tailored to specific business needs."
+      ]
+    }
+  ]
+}

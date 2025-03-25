@@ -1,0 +1,32 @@
+{
+  "ideas": [
+    {
+      "id": 1,
+      "title": "AI Content Generator for Local Businesses",
+      "description": "AI-powered tool that generates localized marketing content for small businesses, tailored to their specific audience and region.",
+      "status": "Coming Soon",
+      "tags": ["SaaS", "LLM", "Marketing"]
+    },
+    {
+      "id": 2,
+      "title": "Small Business AI Budget Forecaster",
+      "description": "Machine learning tool that analyzes spending patterns and provides predictive budget forecasting for small businesses.",
+      "status": "Coming Soon",
+      "tags": ["SaaS", "ML", "Finance"]
+    },
+    {
+      "id": 3,
+      "title": "AI Customer Journey Mapper",
+      "description": "Visual tool that uses machine learning to map and optimize customer journeys based on interaction data.",
+      "status": "In Development",
+      "tags": ["SaaS", "ML", "Marketing"]
+    },
+    {
+      "id": 4,
+      "title": "Voice-Activated Inventory Assistant",
+      "description": "Voice-controlled AI assistant for quick inventory checks and updates designed for busy retail environments.",
+      "status": "Concept Phase",
+      "tags": ["SaaS", "LLM", "Automation"]
+    }
+  ]
+}
