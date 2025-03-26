@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { User, Bot, MessageSquare, X, Minimize, Maximize, Send } from "lucide-react";
 import { sendChatMessage } from "@/lib/chat-service";
+import { useChatContext } from "@/contexts/chat-context";
 
 type Message = {
   type: "bot" | "user";
@@ -17,6 +18,7 @@ const initialMessages: Message[] = [
 ];
 
 export function FloatingChat() {
+  const { setChatTopic } = useChatContext();
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
