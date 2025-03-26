@@ -2,9 +2,15 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
+import sgMail from "@sendgrid/mail";
 
 // Initialize OpenAI client
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
+
+// Initialize SendGrid if API key is available
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -16,13 +22,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ message: "Missing required fields" });
       }
       
-      // In a real implementation, this would use SendGrid to send the email
-      console.log("Contact form submission:", {
-        name: `${firstName} ${lastName}`,
-        email,
-        company,
-        message
-      });
+      // Prepare message data
+      const fullName = `${firstName} ${lastName}`;
+      const companyInfo = company ? ` from ${company}` : '';
+      const emailContent = `
+        Name: ${fullName}
+        Email: ${email}
+        Company: ${company || 'Not provided'}
+        
+        Message:
+        ${message}
+      `;
+      
+      // If SendGrid API key is available, send the email
+      if (process.env.SENDGRID_API_KEY) {
+        try {
+          const msg = {
+            to: 'scott@scottmitting.com', // Replace with the actual recipient email
+            from: 'no-reply@scottmitting.com', // Replace with verified sender
+            subject: `New contact form submission from ${fullName}${companyInfo}`,
+            text: emailContent,
+            html: emailContent.replace(/\n/g, '<br>')
+          };
+          
+          await sgMail.send(msg);
+          console.log("Email sent successfully");
+        } catch (sendGridError) {
+          console.error("SendGrid error:", sendGridError);
+          return res.status(500).json({ message: "Failed to send email. Please try again later." });
+        }
+      } else {
+        // Log the submission if SendGrid is not configured
+        console.log("Contact form submission (SendGrid not configured):", {
+          name: fullName,
+          email,
+          company,
+          message
+        });
+      }
       
       return res.json({ success: true, message: "Message sent successfully" });
     } catch (error) {
