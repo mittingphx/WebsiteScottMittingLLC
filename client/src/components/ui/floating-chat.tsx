@@ -121,14 +121,14 @@ export function FloatingChat() {
       {/* Chat window when open */}
       {isOpen && (
         <div 
-          className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl flex flex-col ${
+          className={`bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-600 flex flex-col ${
             isMinimized ? 'h-16 w-80' : 'h-[500px] w-[350px] max-h-[80vh]'
           } transition-all duration-300 ease-in-out`}
         >
           {/* Chat header */}
-          <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+          <div className="p-4 border-b border-gray-300 dark:border-gray-600 flex justify-between items-center bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-750">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400">
+              <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-sm">
                 <Bot className="h-5 w-5" />
               </div>
               <div>
@@ -173,11 +173,11 @@ export function FloatingChat() {
                     message.type === "bot" ? (
                       <div key={index} className="flex items-start mb-4">
                         <div className="flex-shrink-0 mr-3">
-                          <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                          <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-sm">
                             <Bot className="h-5 w-5" />
                           </div>
                         </div>
-                        <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 max-w-[85%] shadow-sm">
+                        <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 max-w-[85%] shadow-md border border-gray-100 dark:border-gray-700">
                           <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-wrap">
                             {message.text}
                           </p>
@@ -185,13 +185,13 @@ export function FloatingChat() {
                       </div>
                     ) : (
                       <div key={index} className="flex items-start justify-end mb-4">
-                        <div className="bg-primary-600 rounded-lg px-4 py-3 max-w-[85%] shadow-sm">
+                        <div className="bg-primary-600 rounded-lg px-4 py-3 max-w-[85%] shadow-md">
                           <p className="text-white text-sm">
                             {message.text}
                           </p>
                         </div>
                         <div className="flex-shrink-0 ml-3">
-                          <div className="h-8 w-8 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300">
+                          <div className="h-8 w-8 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 shadow-sm">
                             <User className="h-5 w-5" />
                           </div>
                         </div>
@@ -202,11 +202,11 @@ export function FloatingChat() {
                   {isLoading && (
                     <div className="flex items-start">
                       <div className="flex-shrink-0 mr-3">
-                        <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-sm">
                           <Bot className="h-5 w-5" />
                         </div>
                       </div>
-                      <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-sm">
+                      <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-md border border-gray-100 dark:border-gray-700">
                         <div className="flex space-x-2">
                           <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 animate-bounce" style={{ animationDelay: "0ms" }}></div>
                           <div className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 animate-bounce" style={{ animationDelay: "300ms" }}></div>
@@ -221,7 +221,7 @@ export function FloatingChat() {
               </div>
               
               {/* Chat input */}
-              <div className="p-3 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+              <div className="p-3 border-t border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800">
                 <form className="flex space-x-2" onSubmit={handleSendMessage}>
                   <Input
                     ref={inputRef}
