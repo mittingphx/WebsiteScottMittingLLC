@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { sendContactEmail } from "@/lib/send-email";
 import { MessageSquare } from "lucide-react";
+import { useChatContext } from "@/contexts/chat-context";
 
 export function ContactSection() {
   const { toast } = useToast();
+  const { chatTopic, userEditedContactMessage, setUserEditedContactMessage } = useChatContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -17,8 +19,21 @@ export function ContactSection() {
     message: ""
   });
   
+  // Update the message field with chat topic when available and user hasn't edited it
+  useEffect(() => {
+    if (chatTopic && !userEditedContactMessage && !formData.message) {
+      setFormData(prev => ({ ...prev, message: chatTopic }));
+    }
+  }, [chatTopic, userEditedContactMessage]);
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // If user is editing the message field, mark it as user-edited
+    if (name === 'message') {
+      setUserEditedContactMessage(true);
+    }
+    
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -34,7 +49,7 @@ export function ContactSection() {
         duration: 5000,
       });
       
-      // Reset form
+      // Reset form and editing state
       setFormData({
         firstName: "",
         lastName: "",
@@ -42,6 +57,8 @@ export function ContactSection() {
         company: "",
         message: ""
       });
+      // Reset the user edit flag so future chat topics can auto-populate
+      setUserEditedContactMessage(false);
     } catch (error) {
       toast({
         title: "Failed to send message",
@@ -145,9 +162,17 @@ export function ContactSection() {
                 </div>
                 
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    How can I help you?
-                  </label>
+                  <div className="flex justify-between items-center">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      How can I help you?
+                    </label>
+                    {chatTopic && !userEditedContactMessage && formData.message && (
+                      <span className="text-xs text-primary-600 dark:text-primary-400 flex items-center">
+                        <MessageSquare className="h-3 w-3 mr-1" />
+                        Added from your chat
+                      </span>
+                    )}
+                  </div>
                   <Textarea
                     id="message"
                     name="message"
@@ -155,7 +180,9 @@ export function ContactSection() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="mt-1 focus:ring-primary-500 focus:border-primary-500 block w-full shadow-sm sm:text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-700 dark:text-white rounded-md"
+                    className={`mt-1 focus:ring-primary-500 focus:border-primary-500 block w-full shadow-sm sm:text-sm border-gray-300 dark:border-gray-700 dark:bg-gray-700 dark:text-white rounded-md ${
+                      chatTopic && !userEditedContactMessage && formData.message ? "border-l-4 border-l-primary-500 pl-3" : ""
+                    }`}
                   />
                 </div>
                 

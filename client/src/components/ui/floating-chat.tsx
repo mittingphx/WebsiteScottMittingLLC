@@ -42,6 +42,23 @@ export function FloatingChat() {
     }
   }, [isOpen, isMinimized]);
 
+  // Extract the main topic from the conversation
+  const extractConversationTopic = (userMessages: Message[]) => {
+    if (userMessages.length === 0) return "";
+    
+    // If there's only one message, use it directly (trimmed and limited)
+    if (userMessages.length === 1) {
+      const topic = userMessages[0].text.trim();
+      return topic.length > 100 ? topic.substring(0, 100) + "..." : topic;
+    }
+    
+    // Get the first user message as the main topic
+    const firstMessage = userMessages[0].text.trim();
+    const topic = firstMessage.length > 100 ? firstMessage.substring(0, 100) + "..." : firstMessage;
+    
+    return topic;
+  };
+
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -52,6 +69,7 @@ export function FloatingChat() {
       text: inputValue
     };
     
+    // Add message to the chat
     setMessages(prev => [...prev, userMessage]);
     setInputValue("");
     setIsLoading(true);
@@ -70,6 +88,12 @@ export function FloatingChat() {
       if (isMinimized || !isOpen) {
         setHasUnreadMessages(true);
       }
+      
+      // Extract topic after adding the new message - filter to only get user messages
+      const userMessages = [...messages, userMessage].filter(m => m.type === "user");
+      const topic = extractConversationTopic(userMessages);
+      setChatTopic(topic);
+      
     } catch (error) {
       const errorMessage: Message = {
         type: "bot",
