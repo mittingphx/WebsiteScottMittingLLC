@@ -64,11 +64,18 @@ export function AiChat() {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden flex flex-col h-full">
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-        <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white">AI Assistant</h2>
-        <p className="text-gray-600 dark:text-gray-300 mt-1">
-          Ask questions about my services or how AI can help your business
-        </p>
+      <div className="p-6 border-b border-gray-200 dark:border-gray-700" style={{ background: "rgba(240, 0, 180, 0.4)", borderTopLeftRadius: "10px", borderTopRightRadius: "10px" }}>
+        <div className="flex items-center gap-3">
+          <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-yellow-400 shadow-sm">
+            <Bot className="h-3 w-3" style={{ width: '3rem', height: '3rem' }} />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold font-heading text-yellow-400">AI Assistant</h2>
+            <p className="text-white font-bold mt-1">
+              Ask questions about my services or how AI can help your business
+            </p>
+          </div>
+        </div>
       </div>
       
       <div className="flex-grow p-6 overflow-y-auto h-96 bg-gray-50 dark:bg-gray-900">
@@ -78,7 +85,7 @@ export function AiChat() {
             message.type === "bot" ? (
               <div key={index} className="flex items-start">
                 <div className="flex-shrink-0 mr-3">
-                  <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                  <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-yellow-400">
                     <Bot className="h-6 w-6" />
                   </div>
                 </div>
@@ -107,7 +114,7 @@ export function AiChat() {
           {isLoading && (
             <div className="flex items-start">
               <div className="flex-shrink-0 mr-3">
-                <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                <div className="h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-yellow-400">
                   <Bot className="h-6 w-6" />
                 </div>
               </div>
