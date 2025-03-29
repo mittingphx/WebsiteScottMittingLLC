@@ -157,15 +157,15 @@ export function FloatingChat() {
           } transition-all duration-300 ease-in-out`}
         >
           {/* Chat header */}
-          <div className="p-4 border-b border-gray-300 dark:border-gray-600 flex justify-between items-center bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-750">
+          <div className="p-4 border-b border-gray-300 dark:border-gray-600 flex justify-between items-center" style={{ background: "rgba(144, 246, 60, 0.5992)" }}>
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-sm">
                 <Bot className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">AI Assistant</h3>
+                <h3 className="font-semibold" style={{ color: '#333' }}>AI Assistant</h3>
                 {!isMinimized && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Ask me anything about Scott's services</p>
+                  <p className="text-xs" style={{ color: '#333' }}>Ask me anything about Scott's services</p>
                 )}
               </div>
             </div>
