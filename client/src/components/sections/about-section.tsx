@@ -12,8 +12,8 @@ export function AboutSection() {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                  alt="Scott Mitting working on software development" 
+                  src="/images/scott-profile.jpg" 
+                  alt="Scott Mitting - AI Software Developer" 
                   className="w-full h-full object-cover"
                 />
               </div>

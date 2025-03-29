@@ -65,8 +65,8 @@ export function HeroSection() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative overflow-hidden rounded-xl shadow-2xl dark:shadow-none">
                 <img
-                  src="https://images.unsplash.com/photo-1573164713712-03790a178651?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="AI technology visualization"
+                  src="/images/scott-profile.jpg"
+                  alt="Scott Mitting - AI Software Developer"
                   className="w-full h-auto object-cover rounded-xl"
                 />
                 
