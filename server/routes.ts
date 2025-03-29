@@ -38,8 +38,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (process.env.SENDGRID_API_KEY) {
         try {
           const msg = {
-            to: 'scott@scottmitting.com', // Replace with the actual recipient email
-            from: 'no-reply@scottmitting.com', // Replace with verified sender
+            to: 'scottmittingllc@gmail.com', // Business email for forms
+            from: 'scottmittingllc@gmail.com', // Verified sender email
             subject: `New contact form submission from ${fullName}${companyInfo}`,
             text: emailContent,
             html: emailContent.replace(/\n/g, '<br>')
