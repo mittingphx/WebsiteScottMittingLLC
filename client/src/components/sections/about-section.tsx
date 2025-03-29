@@ -12,7 +12,7 @@ export function AboutSection() {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="/images/scott-profile.jpg" 
+                  src="/images/scott/scott-casual.jpg" 
                   alt="Scott Mitting - AI Software Developer" 
                   className="w-full h-full object-cover"
                 />
