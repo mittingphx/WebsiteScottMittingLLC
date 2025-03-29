@@ -140,8 +140,8 @@ export function FloatingChat() {
             }}
             aria-label="Open chat"
           >
-            <MessageSquare style={{ width: '3rem', height: '3rem', marginBottom: '-5px' }} />
-            <span className="text-[11px] font-medium tracking-wide" style={{ marginTop: '6px' }}>AI Help</span>
+            <MessageSquare style={{ width: '2rem', height: '2rem', marginBottom: '-10px' }} />
+            <span className="text-[11px] font-medium tracking-wide" style={{ marginTop: '10px' }}>AI Help</span>
             {hasUnreadMessages && (
               <span className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 h-4 w-4 bg-red-500 rounded-full animate-pulse"></span>
             )}
