@@ -133,11 +133,15 @@ export function FloatingChat() {
         <div className="relative">
           <Button
             onClick={toggleChat}
-            className="w-auto h-14 px-5 rounded-full shadow-lg bg-primary-600 hover:bg-primary-700 text-white transition-transform hover:scale-105 flex items-center justify-center gap-2"
+            className="w-20 h-20 rounded-full text-white transition-all duration-300 hover:scale-110 flex flex-col items-center justify-center"
+            style={{ 
+              background: "rgba(144, 60, 246, 0.992)",
+              boxShadow: "1px 3px 10px -3px rgba(0, 0, 0, 0.6)"
+            }}
             aria-label="Open chat"
           >
-            <MessageSquare className="h-6 w-6" />
-            <span className="text-[11px] font-medium">AI Help</span>
+            <MessageSquare className="h-12 w-12 mb-1" />
+            <span className="text-[11px] font-medium tracking-wide">AI Help</span>
             {hasUnreadMessages && (
               <span className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 h-4 w-4 bg-red-500 rounded-full animate-pulse"></span>
             )}
