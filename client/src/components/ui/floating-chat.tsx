@@ -131,16 +131,21 @@ export function FloatingChat() {
       {/* Chat button when closed */}
       {!isOpen && (
         <div className="relative">
-          <Button
-            onClick={toggleChat}
-            className="w-14 h-14 rounded-full shadow-lg bg-primary-600 hover:bg-primary-700 text-white transition-transform hover:scale-105"
-            aria-label="Open chat"
-          >
-            <MessageSquare className="h-6 w-6" />
-          </Button>
-          {hasUnreadMessages && (
-            <span className="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/4 h-4 w-4 bg-red-500 rounded-full animate-pulse"></span>
-          )}
+          <div className="flex flex-col items-center relative">
+            <Button
+              onClick={toggleChat}
+              className="w-14 h-14 rounded-full shadow-lg bg-primary-600 hover:bg-primary-700 text-white transition-transform hover:scale-105 flex flex-col items-center justify-center"
+              aria-label="Open chat"
+            >
+              <MessageSquare className="h-6 w-6" />
+              {hasUnreadMessages && (
+                <span className="absolute top-0 right-0 transform translate-x-1/3 -translate-y-1/3 h-4 w-4 bg-red-500 rounded-full animate-pulse"></span>
+              )}
+            </Button>
+            <span className="text-xs font-medium mt-1 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 px-2 py-0.5 rounded-full shadow-sm">
+              AI Help
+            </span>
+          </div>
         </div>
       )}
 
