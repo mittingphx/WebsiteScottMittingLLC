@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import sgMail from "@sendgrid/mail";
+import express from "express";
+import path from "path";
 
 // Initialize OpenAI client
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
@@ -13,6 +15,8 @@ if (process.env.SENDGRID_API_KEY) {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files from public directory
+  app.use(express.static(path.join(process.cwd(), 'public')));
   // Contact form submission endpoint
   app.post('/api/contact', async (req, res) => {
     try {
